@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nouveau collaborateur</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body class="container-fluid">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Collaborateurs <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Statistiques <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Activités <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <form id="needs-validation" novalidate>
+    <div class="form-group row">
+      <label for="formNom" class="col-sm-2 col-form-label">Nom</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="formNom" placeholder="" required>
+        <div class="invalid-feedback">
+          Le nom est obligatoire.
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="formPrenom" class="col-sm-2 col-form-label">Prénom</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="formPrenom" placeholder="" required>
+        <div class="invalid-feedback">
+          Le Prénom est obligatoire.
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="formDtn" class="col-sm-2 col-form-label">Date de naissance</label>
+      <div class="col-sm-6">
+        <input type="date" class="form-control" id="formDtn" placeholder="" required>
+        <div class="invalid-feedback">
+          La date de naissance est invalide.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="formAddr" class="col-sm-2 col-form-label">Adresse</label>
+      <textarea class="col-sm-6" id="formAddr" rows="3" required></textarea>
+      <div class="invalid-feedback">
+        L'addresse est obligatoire.
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="colFormLabel" class="col-sm-2 col-form-label">Numéro de sécurité social</label>
+      <div class="col-sm-6">
+        <input type="number" class="form-control" id="colFormLabel" placeholder="" required>
+        <div class="invalid-feedback">
+          Le numéro de sécurité social est obligatoire.
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6"></div>
+      <div class="col-sm-2"><button type="submit" class="btn btn-outline-dark">Créer</button></div>
+    </div>
+    </html>

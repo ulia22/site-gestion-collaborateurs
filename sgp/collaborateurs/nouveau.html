@@ -5,35 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Nouveau collaborateur</title>
-
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./monStyle.css">
 </head>
+
 <body class="container-fluid">
 
+  <!--NavBar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#"><img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">
+      <!--<img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">-->
+      <h1>Logo</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Collaborateurs <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Statistiques <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Activités <span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./lister.html">Collaborateurs
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./statistiques.html">Statistiques
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./activites.html">Activités
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+        </ul>
     </div>
   </nav>
-
-  <form id="needs-validation" novalidate>
+  <!-- Titre-->
+  <h1>Nouveau collaborateurs</h1>
+  <!-- formulaire-->
+  <form id="needs-validation" class="col" novalidate>
     <div class="form-group row">
+      <div class="col-sm-2"></div>
       <label for="formNom" class="col-sm-2 col-form-label">Nom</label>
       <div class="col-sm-6">
         <input type="text" class="form-control" id="formNom" placeholder="" required>
@@ -43,6 +58,7 @@
       </div>
     </div>
     <div class="form-group row">
+      <div class="col-sm-2"></div>
       <label for="formPrenom" class="col-sm-2 col-form-label">Prénom</label>
       <div class="col-sm-6">
         <input type="text" class="form-control" id="formPrenom" placeholder="" required>
@@ -52,6 +68,7 @@
       </div>
     </div>
     <div class="form-group row">
+      <div class="col-sm-2"></div>
       <label for="formDtn" class="col-sm-2 col-form-label">Date de naissance</label>
       <div class="col-sm-6">
         <input type="date" class="form-control" id="formDtn" placeholder="" required>
@@ -60,16 +77,19 @@
         </div>
       </div>
     </div>
-
-    <div class="form-group">
+    <div class="form-group row">
+      <div class="col-sm-2"></div>
       <label for="formAddr" class="col-sm-2 col-form-label">Adresse</label>
-      <textarea class="col-sm-6" id="formAddr" rows="3" required></textarea>
-      <div class="invalid-feedback">
-        L'addresse est obligatoire.
+      <div class="col-sm-6">
+        <textarea class="form-control" id="formAddr" rows="3" required></textarea>
+        <div class="invalid-feedback">
+          L'addresse est obligatoire.
+        </div>
       </div>
     </div>
 
     <div class="form-group row">
+      <div class="col-sm-2"></div>
       <label for="colFormLabel" class="col-sm-2 col-form-label">Numéro de sécurité social</label>
       <div class="col-sm-6">
         <input type="number" class="form-control" id="colFormLabel" placeholder="" required>
@@ -78,8 +98,63 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-6"></div>
-      <div class="col-sm-2"><button type="submit" class="btn btn-outline-dark">Créer</button></div>
+    <!-- Bouton trigger modal-->
+    <div class="form-group row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal">Créer</button>
+      </div>
     </div>
-    </html>
+  </form>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Création d'un collaborateur</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Vous êtes sur le point de créer un nouveau collaborateur:</p>
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <div class="col">Nom</div>
+                <div class="col">Barbaste</div>
+              </div>
+              <div class="row">
+                <div class="col">Prénom</div>
+                <div class="col">Clément</div>
+              </div>
+              <div class="row">
+                <div class="col">Date de naissance</div>
+                <div class="col">03/12/1992</div>
+              </div>
+              <div class="row">
+                <div class="col">Addresse</div>
+                <div class="col">15 ch. de chibario 31810 venerque</div>
+              </div>
+              <div class="row">
+                <div class="col">Numéro de sécurité sociale</div>
+                <div class="col">N6548654854964</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
+</body>
+</html>
